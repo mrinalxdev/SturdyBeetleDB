@@ -10,6 +10,10 @@ a {
     text-decoration: none;
     color: #fff;
 }
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 /* MAIN WEBSITE CSS  */
 .head {
@@ -59,8 +63,60 @@ a {
 .background {
     width: 100vw;
     background-size: cover;
-    height: 99vh;
+    height: 90vh;
     background: no-repeat center center; 
     background-image: linear-gradient(rgba(0, 1, 0.5, 0.8), rgba(0, 0, 0, 0.8)), url('../Asset/hero-img.png');
-    background-size: cover;
+}
+
+
+/* HERO CTN  */ 
+.hero{
+    margin-top: 70px;
+    text-align: center;
+}
+.hero-txt h1{
+    font-size: 4.5rem;
+    font-family: 'Lato', sans-serif;
+}
+.hero-txt p {
+    padding-top: 18px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: grey;
+}
+.hero-txt p  span{
+    color: grey;
+    font-weight: 700;
+}
+.hero-btn {
+    padding-top: 40px;
+}
+.hero-btn button {
+    padding: 10px 45px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbc252;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.hero-btn button i {
+    color: #000;
+    transition: 0.2s ease;
+}
+.hero-btn button:hover {
+    background-color: #FFB100;
+}
+.hero-btn button i:hover {
+    transform: translateX(5px);
+}
+
+
+/* MAIN SECTION  */
+
+.explain-box h1{
+    color: #000;
 }
