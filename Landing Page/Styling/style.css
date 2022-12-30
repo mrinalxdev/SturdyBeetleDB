@@ -27,6 +27,12 @@ a {
     display: flex;
     align-items: center;
 }
+.logo p {
+    font-family: sans-serif;
+    padding-top: 2px;
+    font-size: 12px;
+    color: grey;
+}
 .head .logo img{
     width: 60px;
 }
@@ -43,6 +49,11 @@ a {
     font-weight: 500;
     border: none;
     font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.btn-cta button:hover {
+    background-color: #0A2647;
 }
 
 .background {
