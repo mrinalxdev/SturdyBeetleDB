@@ -5,11 +5,23 @@
     padding: 0;
     color: #fff;
 }
-/* COMMON CSS  */
+/* On Body CSS  */
 a {
     text-decoration: none;
     color: #fff;
 }
+::-webkit-scrollbar {
+    width: 2px;
+}
+::-webkit-scrollbar-track {
+    background-color: grey;
+}
+::-webkit-scrollbar-thumb {
+    width: 2px;
+}
+
+
+
 body {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -63,7 +75,7 @@ body {
 .background {
     width: 100vw;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     background: no-repeat center center; 
     background-image: linear-gradient(rgba(0, 1, 0.5, 0.8), rgba(0, 0, 0, 0.8)), url('../Asset/hero-img.png');
 }
@@ -117,6 +129,44 @@ body {
 
 /* MAIN SECTION  */
 
-.explain-box h1{
-    color: #000;
+main {
+    height: 100vh;
+    background-color: #100F0F;
+    padding-top: 2.5rem;
 }
+.box {
+    display: flex;
+}
+.box > div {
+    margin: auto;
+    max-width: 30%;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+}
+.box1 {
+    /* border: 1px solid #fff; */
+    background-color: #040303;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 10px 6px 20px -4px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.box1:hover {
+    transform: translateY(-5px);
+}
+.box .head-box1 {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.box .head-box1 h1 {
+    color: #fbc252;
+}
+
+.box .head-box1 i {
+    font-size: 15px;
+    margin-right: 20px;
+    color: #fbc252;
+}
+
