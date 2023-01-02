@@ -130,10 +130,14 @@ body {
 /* MAIN SECTION  */
 
 main {
-    height: 100vh;
+    height: 400vh;
     background-color: #100F0F;
     padding-top: 2.5rem;
 }
+
+/* EXPLAIN SECTION  */
+
+
 .box {
     display: flex;
 }
@@ -165,8 +169,88 @@ main {
 }
 
 .box .head-box1 i {
-    font-size: 15px;
+    font-size: 25px;
+    margin-left: 20px;
     margin-right: 20px;
     color: #fbc252;
+}
+
+
+/* LERANING SECTION  */
+
+.learning {
+    margin: 5rem 4rem;
+}
+.box-learning {
+    display: flex;
+    align-items: center;
+}
+.box-learning .box-txt {
+    margin-left: 10px;
+    font-family: 'Lato', sans-serif;
+}
+.box-learning .box-txt h1{
+    font-size: 32px;
+    margin-bottom: 30px;
+    user-select: none;
+}
+.box-learning .box-txt p{
+    line-height: 21px;
+    user-select: none;
+}
+.box-learning .learn-img img{
+    margin-bottom: 3rem;
+    margin-right: 40px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+/* ABOUT TEACHING */
+
+.about-teaching  {
+    background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('../Asset/About-teaching.png');
+    height: 70vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+}
+.teaching {
+    display: flex;
+    margin: auto;
+    border: 1px solid;
+    max-width: 75%;
+    background-color: #fff;
+    border-radius: 20px;
+    /* padding: 10px; */
+}
+.about-learn {
+    max-width: 500px;
+    padding: 20px;
+}
+.about-learn h1 {
+    color: #000;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-bottom: 16px;
+}
+.about-learn p {
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    line-height: 22px;
+}
+.about-path {
+    padding: 20px;
+}
+.about-path h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: grey;
+    font-size: 29px;
+}
+.about-path p {
+    font-family: 'Lato', sans-serif;
+    color: grey;
+    font-size: 16px;
 }
 
