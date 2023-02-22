@@ -4,7 +4,7 @@ import { createTheme  } from '@mui/material/styles'
 
 export const tokens = (mode) = () => ({
     
-    ..(mode === 'dark'
+    ...(mode === 'dark'
         ?  {
             primary: {
                 100: "#cdccda",
@@ -78,21 +78,56 @@ export const themeSettings = (mode) => {
                     background : {
                         default : colors.primary[500],
                     }
-                } : {
-                main : colors.primary[500],
-                },
-                secondary : {
-                    main : colors.secondaryPink[500],
-                },
-                neutral : {
-                    dark : colors.buttonsDarkPink[700],
-                    main : colors.buttonsDarkPink[500],
-                    light : colors.buttonsDarkPink[100]
-                },
-                background : {
-                    default : '#fcfcfc'
-                }     
+                } 
+                : {
+                    primary : {
+                        main : colors.primary[500],
+                    },
+                    secondary : {
+                        main : colors.secondaryPink[500],
+                    },
+                    neutral : {
+                        dark : colors.buttonsDarkPink[700],
+                        main : colors.buttonsDarkPink[500],
+                        light : colors.buttonsDarkPink[100]
+                    },
+                    background : {
+                        default : colors.primary[500],
+                    }
+                }    
             )
+        },
+
+        typography : {
+            fontFmaily : ["Source Sans Pro", "sans-serif"].join(","), 
+            fontSize : 12,
+            h1 : {
+                fontFmaily : ["Source Sans Pro", "sans-serif"].join(","),
+                fontSize : 40,
+            },
+            h2 : {
+                fontFmaily : ["Source Sans Pro", "sans-serif"].join(","),
+                fontSize : 32,
+            },
+            h3 : {
+                fontFmaily : ["Source Sans Pro", "sans-serif"].join(","),
+                fontSize : 24,
+            },
+            h4 : {
+                fontFmaily : ["Source Sans Pro", "sans-serif"].join(","),
+                fontSize : 20,
+            },
+            h5 : {
+                fontFmaily : ["Source Sans Pro", "sans-serif"].join(","),
+                fontSize : 16,
+            },
+            h6 : {
+                fontFmaily : ["Source Sans Pro", "sans-serif"].join(","),
+                fontSize : 14,
+            },
         }
+
     }
 }
+
+
