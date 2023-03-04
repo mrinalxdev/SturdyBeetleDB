@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Stack, Row, Col } from 'react-bootstrap'
+import { Form, Stack, Row, Col, Button } from 'react-bootstrap'
 import CreatableReactSelect from 'react-select/creatable'
 
 const NoteForm = () => {
@@ -17,10 +17,19 @@ const NoteForm = () => {
                     <Col>
                         <Form.Group controlId = 'title'>
                             <Form.Label>Tags</Form.Label>
-                            <CreatableReactSelect />
+                            <CreatableReactSelect isMulti/>
                         </Form.Group>
                     </Col>
                 </Row>
+                    <Form.Group controlId = 'markdown'>
+                            <Form.Label>Body</Form.Label>
+                            <Form.Control required as="textarea" rows={15}/>
+                    </Form.Group>
+
+                    <Stack direction="horizontal" gap = {3}>
+                        <Button type="submit" varient = "primary">Save</Button>
+                        <Button type="button" variant = "outline-secondary">Cancel</Button>
+                    </Stack>
             </Stack>
         </Form>
     
