@@ -40,7 +40,7 @@ const NoteForm = ({ onSubmit, addTags, availableTags }: NoteFormProps) => {
                         </Form.Group>
                     </Col>
                     <Col>
-                        <Form.Group controlId = 'title'>
+                        <Form.Group controlId = 'tags'>
                             <Form.Label>Tags</Form.Label>
                             <CreatableReactSelect 
                             onCreateOption={label => {
