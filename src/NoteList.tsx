@@ -1,18 +1,28 @@
-import { React, useState } from 'react'
+import { React, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Row, Col, Stack, Button, Form } from 'react-bootstrap'
 import ReactSelect from 'react-select'
-import { Tag } from './App'
+import { Tag, Note } from './App'
 
 type NoteListProps = {
     availableTags: Tags[]
+    notes: Note[]
 }
 
-const NoteList = ({availableTags}: NoteListProps) => {
+const NoteList = ({availableTags, notes}: NoteListProps) => {
     const [selectedTags, setSelectedTags ] = useState<Tag[]>([])
+    const [title, setTitle ] = useState("")
+
+
+    const filteredNotes = useMemo(() => {
+        return notes.filter(note => {
+            return (title === "" || note.title.toLowerCase().includes(title.toLowerCase())) && (selectedTags.lenght === 0 || selectedTags.every(tag => note.tags.some(noteTag)))
+        })
+    }, [title, selectedTags, notes])
+
   return (
     <> 
-    <Row>
+    <Row className = "align-items-center mb-4">
         <Col><h1>NotesWizz</h1></Col>
         <Col xs='auto'>
             <Stack gap={2} direction='horizontal'>
@@ -29,7 +39,12 @@ const NoteList = ({availableTags}: NoteListProps) => {
             <Col>
                 <Form.Group controlId='title'>
                     <Form.Label>Title</Form.Label>
-                    <Form.Control type='text' />
+                    <Form.Control type='text' value={title}
+                    onChange ={
+                        e=> setTitle(e.target.value)
+                    }
+                    />
+                    
                 </Form.Group>
             </Col>
             <Col>
@@ -52,7 +67,15 @@ const NoteList = ({availableTags}: NoteListProps) => {
             </Col>
         </Row>
     </Form>
+    
+    <Row xs ={1} sm={2} lg={3} xl={4} className="g-3">
+        {filteredNotes.map(note => (
+            <Col key={note.id}> 
+                <NoteCard />
+            </Col>
+        ))}
 
+    </Row>
 
     
     </>
