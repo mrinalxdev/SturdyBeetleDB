@@ -1,10 +1,14 @@
+import KanbanBoard from "./components/KanbanBoard"
 
 function App() {
 
 
   return (
     <>
-      <h1>Hello this is side Mrinal</h1>
+    <div>
+      <h1 className="font-mono text-center my-2 text-3xl">KanToday</h1>
+      <KanbanBoard />
+    </div>
     </>
   )
 }
