@@ -7,3 +7,4 @@ In this database the data is been stored in JSON format such format is been used
 > The main motive to build this db is to connect it with a CAS project which will decentralise the Data provided by SturdyBeetleDB 
 
 This will first read a file "users" and write out all the users in JSON format . 
+
